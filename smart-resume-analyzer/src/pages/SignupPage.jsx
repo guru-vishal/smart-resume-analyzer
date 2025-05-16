@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../utils/useAuth";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000/"; // Set your API base URL here
+axios.defaults.baseURL = "https://smart-resume-analyzer-1u14.onrender.com/"; // Set your API base URL here
 
 function SignupPage() {
   const [name, setName] = useState("");

@@ -5,7 +5,7 @@ import { useAuth } from "../utils/useAuth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-axios.defaults.baseURL = "http://localhost:5000/";
+axios.defaults.baseURL = "https://smart-resume-analyzer-1u14.onrender.com/";
 
 const LeaderboardPage = () => {
   const navigate = useNavigate();

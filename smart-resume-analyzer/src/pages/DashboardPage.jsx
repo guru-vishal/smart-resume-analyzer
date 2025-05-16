@@ -19,7 +19,7 @@ import { useAuth } from "../utils/useAuth";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-axios.defaults.baseURL = "http://localhost:5000/";
+axios.defaults.baseURL = "https://smart-resume-analyzer-1u14.onrender.com/";
 
 const sampleData = [
   { date: new Date("2025-01-15").toISOString().split("T")[0], score: 65 },
