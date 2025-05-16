@@ -97,7 +97,7 @@ const LeaderboardPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 md:mb-0">
           Leaderboard
         </h1>
 
@@ -181,7 +181,7 @@ const LeaderboardPage = () => {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
               {leaderboardData.map((user, index) => (
                 <tr
                   key={user.id}
@@ -263,7 +263,7 @@ const LeaderboardPage = () => {
                 : leaderboardRank == 3
                 ? "rd"
                 : "th"}{" "}
-              out of 142 users in your category
+              out of {leaderboardData.length} users in your category
             </p>
 
             <div className="flex items-center gap-4">

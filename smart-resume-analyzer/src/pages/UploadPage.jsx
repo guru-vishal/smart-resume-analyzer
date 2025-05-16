@@ -159,11 +159,11 @@ function UploadPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-700">
       {/* Header */}
-      <div className="bg-white shadow">
+      <div className="bg-white shadow dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Upload Resume</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Upload Resume</h1>
           <p className="mt-1 text-sm text-gray-500">
             Upload your resume to get personalized analytics and improve your score.
           </p>
@@ -172,11 +172,11 @@ function UploadPage() {
 
       {/* Main Content */}
       <div className="max-w-3xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="bg-white shadow rounded-lg overflow-hidden">
+        <div className="bg-white shadow rounded-lg overflow-hidden dark:bg-gray-900">
           {/* File Upload Area */}
           <div
             className={`p-6 flex flex-col items-center justify-center border-2 border-dashed rounded-lg transition-colors ${
-              dragActive ? "border-indigo-500 bg-indigo-50" : "border-gray-300 hover:border-indigo-400"
+              dragActive ? "border-indigo-500 bg-indigo-50" : "border-gray-300 dark:border-gray-600 hover:border-indigo-400"
             }`}
             onDragEnter={handleDragEnter}
             onDragLeave={handleDragLeave}
@@ -233,8 +233,8 @@ function UploadPage() {
           {uploadStatus === "uploading" && (
             <div className="px-6 py-4 border-t border-gray-200" aria-live="polite">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-gray-700">Uploading...</span>
-                <span className="text-sm font-medium text-gray-700">{uploadProgress}%</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-400">Uploading...</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-400">{uploadProgress}%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
@@ -258,7 +258,7 @@ function UploadPage() {
           )}
 
           {/* Actions */}
-          <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end space-x-3">
+          <div className="px-6 py-4 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 flex justify-end space-x-3">
             <button
               type="button"
               onClick={() => navigate("/dashboard")}
@@ -284,9 +284,9 @@ function UploadPage() {
         </div>
 
         {/* Tips Section */}
-        <div className="mt-8 bg-white shadow rounded-lg overflow-hidden">
+        <div className="mt-8 bg-white shadow rounded-lg overflow-hidden dark:bg-gray-900">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-lg font-medium text-gray-900">Resume Tips</h2>
+            <h2 className="text-lg font-medium text-gray-900 dark:text-white">Resume Tips</h2>
           </div>
           <div className="px-6 py-4">
             <ul className="space-y-3 text-sm text-gray-600">

@@ -51,7 +51,7 @@ const ChartSelector = ({ value, onChange }) => {
         id="chart-type"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4 w-full md:w-64 text-white"
+        className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4 w-full md:w-64 text-gray-800 dark:text-white"
       >
         <option value="bar">Bar Chart (Top Skills)</option>
         <option value="pie">Pie Chart (Skills by Category)</option>
@@ -165,7 +165,7 @@ const LevelIndicator = ({ level }) => {
   return (
     <div className="flex items-center">
       <div className={`w-3 h-3 rounded-full ${colors[level]} mr-2`}></div>
-      <span className="capitalize text-white">{level}</span>
+      <span className="capitalize text-gray-800 dark:text-gray-300">{level}</span>
       <div className="ml-2 flex">
         {[1, 2, 3].map((i) => (
           <div
@@ -275,11 +275,11 @@ const SkillVisualizationPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-black">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
         Skills Visualization
       </h1>
 
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
+      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 mb-8">
         <ChartSelector value={chartType} onChange={setChartType} />
 
         <div className="mb-6">
@@ -317,7 +317,7 @@ const SkillVisualizationPage = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">
           <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
             Resume Score
           </h2>
@@ -343,7 +343,7 @@ const SkillVisualizationPage = () => {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">
           <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
             Skill Level Distribution
           </h2>
@@ -384,7 +384,7 @@ const SkillVisualizationPage = () => {
         </div>
       </div>
 
-      <div className="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <div className="mt-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">
         <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
           Recommendations
         </h2>

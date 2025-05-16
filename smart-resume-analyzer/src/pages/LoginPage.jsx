@@ -50,7 +50,7 @@ function LoginPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="you@example.com"
             required
           />
@@ -73,7 +73,7 @@ function LoginPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="••••••••"
             required
           />

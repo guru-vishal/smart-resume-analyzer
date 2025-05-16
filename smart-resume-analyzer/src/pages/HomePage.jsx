@@ -24,7 +24,7 @@ function HomePage() {
       {/* Hero Section */}
       <section className="py-12 md:py-20">
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 dark:text-white">
             Boost Your Career with{" "}
             <span className="text-primary-600">Smart Resume Analysis</span>
           </h1>
@@ -63,14 +63,14 @@ function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800 rounded-xl my-12">
+      <section className="py-16 bg-gray-50 dark:bg-gray-600 rounded-xl my-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
             How It Works
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card text-center dark:bg-white">
+            <div className="card text-center bg-white dark:bg-gray-900">
               <div className="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,14 +87,14 @@ function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Upload Your Resume</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Upload Your Resume</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Simply upload your resume in PDF or DOCX format and our system
                 will automatically analyze it.
               </p>
             </div>
 
-            <div className="card text-center dark:bg-white">
+            <div className="card text-center bg-white dark:bg-gray-900">
               <div className="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
                 Get Detailed Analysis
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -120,7 +120,7 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="card text-center dark:bg-white">
+            <div className="card text-center bg-white dark:bg-gray-900">
               <div className="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Improve Your Score</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Improve Your Score</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Follow our personalized recommendations to enhance your resume
                 and track your progress on the leaderboard.
@@ -150,7 +150,7 @@ function HomePage() {
       {/* Stats Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black dark:text-white">
             Why Choose Us
           </h2>
 
@@ -193,20 +193,20 @@ function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800 rounded-xl my-12">
+      <section className="py-16 bg-gray-50 dark:bg-gray-600 rounded-xl my-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
             What Our Users Say
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card dark:bg-white">
+            <div className="card bg-white dark:bg-gray-800">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
                   <span className="text-primary-600 font-bold text-xl">JD</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">John Doe</h4>
+                  <h4 className="font-semibold text-white">John Doe</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Software Engineer
                   </p>
@@ -260,13 +260,13 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="card dark:bg-white">
+            <div className="card bg-white dark:bg-gray-800">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
                   <span className="text-primary-600 font-bold text-xl">AS</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Alex Smith</h4>
+                  <h4 className="font-semibold text-white">Alex Smith</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Marketing Manager
                   </p>
@@ -321,14 +321,14 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="card dark:bg-white">
+            <div className="card bg-white dark:bg-gray-800">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
                   <span className="text-primary-600 font-bold text-xl">MJ</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Maria Johnson</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <h4 className="font-semibold text-white">Maria Johnson</h4>
+                  <p className="text-sm text-gray-600 dark:text-white">
                     Data Analyst
                   </p>
                 </div>
@@ -388,7 +388,7 @@ function HomePage() {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
             Ready to Enhance Your Resume?
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">

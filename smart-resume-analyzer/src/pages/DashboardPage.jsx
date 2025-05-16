@@ -49,7 +49,7 @@ function DashboardPage() {
   });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [topPercent, setTopPercent] = useState(0);
+  const [topPercent, setTopPercent] = useState('');
   const [leaderboardRank, setLeaderboardRank] = useState('-');
 
   useEffect(() => {
@@ -104,11 +104,11 @@ function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-700">
       {/* Header */}
-      <div className="bg-white shadow">
+      <div className="bg-white shadow dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white">Dashboard</h1>
           <p className="mt-1 text-sm text-gray-500">
             Welcome back, {userData.name}! Here's an overview of your resume
             analytics.
@@ -121,9 +121,9 @@ function DashboardPage() {
         {/* Stats Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Stat Card 1 */}
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow p-6 dark:bg-gray-900">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-medium text-gray-700">
+              <h2 className="text-lg font-medium text-gray-700 dark:text-gray-400">
                 Current Score
               </h2>
               <span
@@ -147,8 +147,8 @@ function DashboardPage() {
               </span>
             </div>
             <div className="mt-2 flex items-baseline">
-              <p className="text-5xl font-semibold text-gray-900">
-                {userData.currentScore}
+              <p className="text-5xl font-semibold text-gray-800 dark:text-white">
+                {userData.currentScore ? userData.currentScore : '-'}
               </p>
               <p className="ml-2 text-sm font-medium text-gray-500">/ 100</p>
             </div>
@@ -158,13 +158,13 @@ function DashboardPage() {
           </div>
 
           {/* Stat Card 2 */}
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow p-6 dark:bg-gray-900">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-medium text-gray-700">Last Upload</h2>
+              <h2 className="text-lg font-medium text-gray-700 dark:text-gray-400">Last Upload</h2>
               <Upload className="h-5 w-5 text-gray-400" />
             </div>
             <div className="mt-2">
-              <p className="text-2xl font-semibold text-gray-900">
+              <p className="text-2xl font-semibold text-gray-900 dark:text-white">
                 {userData.lastUpload
                   ? new Date(userData.lastUpload).toLocaleDateString("en-US", {
                       year: "numeric",
@@ -186,16 +186,16 @@ function DashboardPage() {
           </div>
 
           {/* Stat Card 3 */}
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow p-6 dark:bg-gray-900">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-medium text-gray-700">
+              <h2 className="text-lg font-medium text-gray-700 dark:text-gray-400">
                 Leaderboard Rank
               </h2>
               <Award className="h-5 w-5 text-yellow-500" />
             </div>
             <div className="mt-2">
-              <p className="text-2xl font-semibold text-gray-900">
-                #{leaderboardRank}
+              <p className="text-2xl font-semibold text-gray-900 dark:text-white">
+                {'#'+leaderboardRank}
               </p>
             </div>
             <div className="mt-4">
@@ -213,8 +213,8 @@ function DashboardPage() {
         {/* Charts Row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Score Progress Chart */}
-          <div className="bg-white rounded-lg shadow p-6">
-            <h2 className="text-lg font-medium text-gray-700 mb-4">
+          <div className="bg-white rounded-lg shadow p-6 dark:bg-gray-900">
+            <h2 className="text-lg font-medium text-gray-700 mb-4 dark:text-gray-400">
               Score Progress
             </h2>
             <div className="h-64">
@@ -250,8 +250,8 @@ function DashboardPage() {
           </div>
 
           {/* Top Skills Chart */}
-          <div className="bg-white rounded-lg shadow p-6">
-            <h2 className="text-lg font-medium text-gray-700 mb-4">
+          <div className="bg-white rounded-lg shadow p-6 dark:bg-gray-900">
+            <h2 className="text-lg font-medium text-gray-700 mb-4 dark:text-gray-400">
               Top Skills
             </h2>
             <div className="h-64">
@@ -289,32 +289,32 @@ function DashboardPage() {
 
         {/* Quick Actions */}
         <div className="mb-8">
-          <h2 className="text-lg font-medium text-gray-700 mb-4">
+          <h2 className="text-lg font-medium text-gray-700 mb-4 dark:text-gray-400">
             Quick Actions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <button
               onClick={() => navigate("/upload")}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:bg-gray-50"
+              className="flex items-center justify-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow hover:bg-gray-50"
             >
               <Upload className="mr-2 h-5 w-5 text-indigo-600" />
-              <span className="font-medium text-gray-900">Upload Resume</span>
+              <span className="font-medium text-gray-900 dark:text-gray-400">Upload Resume</span>
             </button>
             <button
               onClick={() => navigate("/visualize")}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:bg-gray-50"
+              className="flex items-center justify-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow hover:bg-gray-50"
             >
               <PieChart className="mr-2 h-5 w-5 text-indigo-600" />
-              <span className="font-medium text-gray-900">
+              <span className="font-medium text-gray-900 dark:text-gray-400">
                 Skill Visualization
               </span>
             </button>
             <button
               onClick={() => navigate("/leaderboard")}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:bg-gray-50"
+              className="flex items-center justify-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow hover:bg-gray-50"
             >
               <Award className="mr-2 h-5 w-5 text-indigo-600" />
-              <span className="font-medium text-gray-900">Leaderboard</span>
+              <span className="font-medium text-gray-900 dark:text-gray-400">Leaderboard</span>
             </button>
           </div>
         </div>

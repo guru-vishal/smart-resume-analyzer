@@ -16,12 +16,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-md dark:bg-gray-800">
+    <nav className="bg-primary-600 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-primary-600">
+              <span className="text-xl font-bold text-white">
                 Smart Resume Analyzer
               </span>
             </Link>
@@ -31,7 +31,7 @@ function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/"
-              className="text-gray-700 hover:text-primary-600 dark:text-gray-300 px-3 py-2"
+              className="text-white hover:text-black px-3 py-2"
             >
               Home
             </Link>
@@ -40,25 +40,25 @@ function Navbar() {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-gray-700 hover:text-primary-600 dark:text-gray-300 px-3 py-2"
+                  className="text-white hover:text-black px-3 py-2"
                 >
                   Dashboard
                 </Link>
                 <Link
                   to="/upload"
-                  className="text-gray-700 hover:text-primary-600 dark:text-gray-300 px-3 py-2"
+                  className="text-white hover:text-black px-3 py-2"
                 >
                   Upload
                 </Link>
                 <Link
                   to="/leaderboard"
-                  className="text-gray-700 hover:text-primary-600 dark:text-gray-300 px-3 py-2"
+                  className="text-white hover:text-black px-3 py-2"
                 >
                   Leaderboard
                 </Link>
                 <Link
                   to="/visualize"
-                  className="text-gray-700 hover:text-primary-600 dark:text-gray-300 px-3 py-2"
+                  className="text-white hover:text-black px-3 py-2"
                 >
                   Visualize
                 </Link>

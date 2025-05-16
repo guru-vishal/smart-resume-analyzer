@@ -92,7 +92,7 @@ function SignupPage() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="John Doe"
             required
           />
@@ -107,7 +107,7 @@ function SignupPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="you@example.com"
             required
           />
@@ -122,7 +122,7 @@ function SignupPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="••••••••"
             minLength="8"
             required
@@ -138,7 +138,7 @@ function SignupPage() {
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="form-input text-white"
+            className="form-input text-black dark:text-white"
             placeholder="••••••••"
             minLength="8"
             required
