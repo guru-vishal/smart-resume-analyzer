@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-50;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md dark:bg-gray-800;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md 
+    focus:outline-none focus:ring-2 focus:ring-primary-500 
+    dark:bg-gray-700 dark:border-gray-600;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+  }
+
+  .py-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
