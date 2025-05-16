@@ -197,9 +197,9 @@ const SkillVisualizationPage = () => {
       return;
     }
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 800);
 
     const fetchData = async () => {
       try {
@@ -218,6 +218,7 @@ const SkillVisualizationPage = () => {
             "x-auth-token": token,
           },
         });
+        setIsLoading(false);
         setVisualizationData(response.data);
         setError(null);
       } catch (err) {

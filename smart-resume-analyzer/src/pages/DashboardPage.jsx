@@ -59,10 +59,6 @@ function DashboardPage() {
       return;
     }
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-
     const fetchUserData = async () => {
       try {
         setIsLoading(true);
@@ -78,6 +74,7 @@ function DashboardPage() {
             "x-auth-token": token,
           },
         });
+        setIsLoading(false);
         setLeaderboardRank(res.data.userRank);
         setTopPercent((res.data.userRank / res.data.leaderboard?.length) * 100);
         const topSkills = data.skills

@@ -25,9 +25,9 @@ const LeaderboardPage = () => {
       return;
     }
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 800);
 
     // const fetchSkillsData = async () => {
     //   try{
@@ -57,6 +57,7 @@ const LeaderboardPage = () => {
             "x-auth-token": token,
           },
         });
+        setIsLoading(false);
         const data = response.data;
         setCurrentUserId(data.id);
         setLeaderboardData(data.leaderboard);
