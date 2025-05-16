@@ -109,10 +109,6 @@ const getProfile = async (req, res) => {
       currentScore: score ? score.score : 0,
       lastUpload: score ? score.lastUpdated : null,
       progressData: [
-        { date: "2025-01-14", score: 65 },
-        { date: "2025-02-14", score: 59 },
-        { date: "2025-03-14", score: 80 },
-        { date: "2025-04-14", score: 81 },
         { date: new Date().toISOString().split("T")[0], score: score ? score.score : 0 },
       ],
       skills: score ? score.skills : [],
