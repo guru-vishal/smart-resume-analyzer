@@ -24,7 +24,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../utils/useAuth";
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = "https://smart-resume-analyzer-1u14.onrender.com/";
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 
 // COLORS for charts
 const COLORS = [
